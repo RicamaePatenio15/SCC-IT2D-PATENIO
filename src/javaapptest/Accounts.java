@@ -13,9 +13,20 @@ public class Accounts {
         this.email=umail;
         this.username=uname;
         this.password=pass;
+        this.ID= UID;
        
     }
     
-    public void
+    public void viewInfo(){
+        
+        System.out.println("-----------------------------------");
+        System.out.println("ID: "+this.ID);
+        System.out.println("Firstname: "+this.firstname);
+        System.out.println("Lastname: "+this.lastname);
+        System.out.println("Email: "+this.email);
+        System.out.println("Username: "+this.username);
+        System.out.println("Password: "+this.password);
+        
+    }
     
 }
