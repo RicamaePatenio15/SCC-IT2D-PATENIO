@@ -47,7 +47,6 @@ public class Account{
             String uname = sc.nextLine();
 
             String pass;
-            // Loop to ensure valid password input
             while (true) {
                 System.out.print("Password: ");
                 pass = sc.nextLine();

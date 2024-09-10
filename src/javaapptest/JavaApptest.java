@@ -3,49 +3,52 @@ package javaapptest;
 public class JavaApptest { 
     public static void main(String[] args) {
         
-        Account acct = new Account();
-        acct.getPersonInfo();
     }
-
-   
-    public static String validatePass(String password) {
-        
-        String[] commonPasswords = {"admin", "123", "password"};
-        for (String common : commonPasswords) {
-            if (password.toLowerCase().contains(common.toLowerCase())) {
-                return "Password is too common. Avoid using 'admin', '123', or 'password'.";
-            }
-        }
-
-        
-        if (password.length() < 8) {
-            return "Password must be at least 8 characters long.";
-        }
-
-       
-        if (!password.matches(".*[A-Z].*")) {
-            return "Password must contain at least one uppercase letter.";
-        }
-
-        
-        if (!password.matches(".*[a-z].*")) {
-            return "Password must contain at least one lowercase letter.";
-        }
-
-
-        if (!password.matches(".*\\d.*")) {
-            return "Password must contain at least one digit.";
-        }
-
-      
-        if (!password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*")) {
-            return "Password must contain at least one special character.";
-        }
-
-   
-        return "valid";
     }
-}
+        
+//        Account acct = new Account();
+//        acct.getPersonInfo();
+//    }
+//
+//   
+//    public static String validatePass(String password) {
+//        
+//        String[] commonPasswords = {"admin", "123", "password"};
+//        for (String common : commonPasswords) {
+//            if (password.toLowerCase().contains(common.toLowerCase())) {
+//                return "Password is too common. Avoid using 'admin', '123', or 'password'.";
+//            }
+//        }
+//
+//        
+//        if (password.length() < 8) {
+//            return "Password must be at least 8 characters long.";
+//        }
+//
+//       
+//        if (!password.matches(".*[A-Z].*")) {
+//            return "Password must contain at least one uppercase letter.";
+//        }
+//
+//        
+//        if (!password.matches(".*[a-z].*")) {
+//            return "Password must contain at least one lowercase letter.";
+//        }
+//
+//
+//        if (!password.matches(".*\\d.*")) {
+//            return "Password must contain at least one digit.";
+//        }
+//
+//      
+//        if (!password.matches(".*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?].*")) {
+//            return "Password must contain at least one special character.";
+//        }
+//
+//   
+//        return "valid";
+//    }
+//}
 
 
 //Second Activity
