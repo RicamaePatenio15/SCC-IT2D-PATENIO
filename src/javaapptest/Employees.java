@@ -19,7 +19,7 @@ public class Employees {
     public void viewInfo(){
         
         System.out.print("----------------------------");
-        System.out.println("ID: "+this.id);
+        System.out.println("\nID: "+this.id);
         System.out.println("Name: "+this.name);
         System.out.println("Rate (Hourly): "+this.rate);
         System.out.println("Hours worked: "+this.hwork);
@@ -27,9 +27,17 @@ public class Employees {
         
     }
     public void viewDetails(){
-//    int Netpay= (this.rate*this.hwork)-this.deduction
-//    double average= totalmarks/4;
-//    String status= (average > 3.0) ? "Failed" : "Pass";
-   // System.out.printf("%-10d %-10s %-10d %-10d %-10d %-10d", this.id, this.name,this.rate, this.hwork, this.deduction, Netpay);
+        double gross=this.rate*this.hwork;
+    double Netpay= gross-this.deduction;
+    System.out.printf("%-10d %-10s %-10d %-10d %-10.2f %-10d %-10.2f\n", this.id, this.name,this.rate, this.hwork, gross, this.deduction, Netpay);
+   
+        System.out.println("\n----------------------------");
+         System.out.println("Total salary: " +gross);
+         System.out.println("Total Employee Deduction: "+this.deduction);
+         System.out.println("Total Netpay: "+Netpay);
+      
+        
+        
 }
+      
 }

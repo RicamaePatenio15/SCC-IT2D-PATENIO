@@ -3,9 +3,12 @@ package javaapptest;
 public class JavaApptest { 
     public static void main(String[] args) {
         
+        Employee emply=new Employee();
+        emply.getInfo();
     }
     }
-        
+ 
+//3rd activity
 //        Account acct = new Account();
 //        acct.getPersonInfo();
 //    }
