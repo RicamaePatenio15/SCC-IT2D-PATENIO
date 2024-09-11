@@ -18,29 +18,6 @@ public class Receipts {
        
     }
     
-//public void viewInfo(){
-//        
-//        System.out.print("---------------------");
-//        System.out.print("RECEIPT");
-//        System.out.print("---------------------");
-//        
-//        
-//        System.out.print("Name "+name);
-//        System.out.print("Product Name: "+prodname);
-//        System.out.print("Quantity: "+qty);
-//        System.out.print("Price: "+price);
-//        System.out.print("Cash: "+cash);
-//      
-//        
-//        System.out.println("------------------------------------");
-//        
-//        due= qty*price;
-//        System.out.println("Total due: "+String.format("%.2f", due));
-//        System.out.println("\nCash: "+String.format("%.2f", cash));
-//        System.out.println("\n------------------------------------------");
-//        
-//        change= cash-due;
-//        System.out.println("Change: " +String.format("%.2f",change));
-//}
+
 }
 

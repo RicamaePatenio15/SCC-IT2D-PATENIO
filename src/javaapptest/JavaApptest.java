@@ -2,12 +2,12 @@ package javaapptest;
 
 public class JavaApptest { 
     public static void main(String[] args) {
+
         
-        Employee emply=new Employee();
-        emply.getInfo();
-    }
-    }
- 
+//        Employee emply=new Employee();
+//        emply.getInfo();
+
+
 //3rd activity
 //        Account acct = new Account();
 //        acct.getPersonInfo();
@@ -50,17 +50,14 @@ public class JavaApptest {
 //
 //   
 //        return "valid";
-//    }
-//}
+
 
 
 //Second Activity
-//        Receipt rct = new Receipt();
-//        rct.GetInfo();
-//        rct.viewInfo();  
-//    }
-//}
-        
+        Receipt rct = new Receipt();
+        rct.GetInfo();
+        rct.viewInfo();  
+   
     
 
     
@@ -68,9 +65,6 @@ public class JavaApptest {
 //First Activity
 //        Grade grd = new Grade(); 
 //        grd.getGradeInput();
-//    }
-//    
-//}
 
     
     
@@ -119,7 +113,6 @@ public class JavaApptest {
 //    
 //}
 //
-//    }
-//    
-//}
-//
+
+    }
+}
