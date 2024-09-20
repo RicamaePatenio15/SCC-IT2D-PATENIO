@@ -27,6 +27,18 @@ public class Accounts {
         System.out.println("Username: "+this.username);
         System.out.println("Password: "+this.password);
         
+       System.out.println("-------------------------------------"); 
+       System.out.printf("%-10s | %-15s | %-15s | %-25s | %-10s | %-10s\n", "ID", "First Name", "Last Name", "Email", "Username", "Password");
+       System.out.printf("%-10d | %-15s | %-15s | %-25s | %-10s | %-10s\n", this.ID,this.firstname, this.lastname, this.email, this.username, "************");
+        
     }
     
+     public void editAccounts(int id, String uname, String pass){
+    if(this.ID == id){
+        this.username=uname;
+        this.password=pass;
+        
+    }
+    
+}
 }

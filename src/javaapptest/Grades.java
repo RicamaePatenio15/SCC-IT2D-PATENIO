@@ -18,11 +18,20 @@ public void addGrades(String snm,int sid, double spr, double smd, double spf, do
 public void viewGrades(){
     double totalmarks= this.pr=this.md+this.pf+this.fn;
     double average= totalmarks/4;
-    String status= (average > 3.0) ? "Failed" : "Pass";
+    String status= (average > 3.0) ? "Failed" : "Passed";
     
-    System.out.printf("%-10s %-10d %-10.2f %-10.2f %-10.2f %-10.2f %-10s\n", this.name, this.id,this.pr, this.md, this.fn, average, status);
+    System.out.printf("%-10s | %-10s | %-10s | %-10s | %-10s | %-10s |%-10s\n", "ID", "Name","Prelim", "Midterm", "Prefinal", "Final", "Average", "Status");
+    System.out.printf("%-10d | %-10s | %-10.2f | %-10.2f | %-10.2f | %-10.2f | %-10s\n", this.id, this.name,this.pr, this.md, this.fn, average, status);
 }
     
-    
+    public void editGrades(int id, double prl, double mtm, double prf, double f){
+    if(this.id == id){
+        this.pr = prl;
+        this.md=mtm;
+        this.pf=prf;
+        this.fn=f;
+        
+    }
+}
     
 }
