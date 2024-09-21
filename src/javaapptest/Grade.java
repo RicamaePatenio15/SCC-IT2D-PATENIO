@@ -60,8 +60,8 @@ public class Grade {
                     double fn = sc.nextDouble();
                     
                     gr[nums] = new Grades();
-                    gr[nums].addGrades(name, id, pr, md, pf, fn);
-                    nums++;  
+                    gr[nums].addGrades(name, id, pr, md, pf, fn); 
+                    nums++;
                     }
                     break;
                  
@@ -104,6 +104,10 @@ public class Grade {
                         System.out.println("No student records available to edit.");
                     }
                     break;
+                    
+                case 5:
+                    System.out.println("THANK YOU!!!!");
+                    return;
    
             }
         

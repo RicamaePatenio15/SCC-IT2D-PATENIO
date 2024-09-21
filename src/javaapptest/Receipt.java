@@ -110,7 +110,13 @@ public class Receipt {
                         System.out.println("No receipts available to edit.");
                     }
                     break;
+                    
+                case 5:
+                    System.out.println("THANK YOU!!!!");
+                    return;
+   
             }
+            
             System.out.print("Want to continue (yes/no)?: ");
             choice = sc.next();
         } while (choice.equalsIgnoreCase("yes") || choice.equalsIgnoreCase("y"));

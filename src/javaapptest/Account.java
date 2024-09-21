@@ -7,7 +7,7 @@ import java.util.Set;
 public class Account {
     public Set<Integer> existingIDs = new HashSet<>();
 
-    public void getPersonInfo() {
+    public void getAccount() {
         Scanner sc = new Scanner(System.in);
         Accounts[] acc = new Accounts[100];
         int nums = 0;
@@ -23,10 +23,10 @@ public class Account {
             System.out.println("4. DELETE");
             System.out.println("5. EXIT");
             System.out.println("-------------------");
-            
+
             System.out.print("Enter Option: ");
             int option = sc.nextInt();
-            
+
             while (option > 5 || option < 1) {
                 System.out.print("Invalid Selection, Try Again: ");
                 option = sc.nextInt();
@@ -34,50 +34,54 @@ public class Account {
 
             switch (option) {
                 case 1:
-                    
-                     System.out.print("Enter number of Students: ");
-                     nums = sc.nextInt();
-                     
-                    for(int i=0; i < nums; i++){
-                        
-                    System.out.print("Enter ID: ");
-                    int ID = sc.nextInt();
-                    sc.nextLine();
+                    System.out.print("Enter number of Students: ");
+                    int totalStudents = sc.nextInt();
 
-                    System.out.print("First Name: ");
-                    String firstname = sc.nextLine();
+                    for (int i = 0; i < totalStudents; i++) {
+                        System.out.print("Enter ID: ");
+                        int ID = sc.nextInt();
+                        sc.nextLine();
 
-                    System.out.print("Last Name: ");
-                    String lastname = sc.nextLine();
-
-                    System.out.print("Email: ");
-                    String email = sc.nextLine();
-
-                    System.out.print("Username: ");
-                    String username = sc.nextLine();
-
-                    String password;
-                    while (true) {
-                        System.out.print("Password: ");
-                        password = sc.nextLine();
-                        String validationMessage = JavaApptest.validatePass(password);
-                        if (validationMessage.equals("valid")) {
-                            break;
-                        } else {
-                            System.out.println(validationMessage);
+                        if (existingIDs.contains(ID)) {
+                            System.out.print("ID already exists. Please use a different ID: ");
+                            ID = sc.nextInt();
+                            sc.nextLine();
                         }
-                    }
 
-                    acc[nums] = new Accounts();
-                    acc[nums].addInfo(firstname, lastname, email, username, password, ID);
-                    existingIDs.add(ID);
-                    nums++;
-            }
+                        System.out.print("First Name: ");
+                        String firstname = sc.nextLine();
+
+                        System.out.print("Last Name: ");
+                        String lastname = sc.nextLine();
+
+                        System.out.print("Email: ");
+                        String email = sc.nextLine();
+
+                        System.out.print("Username: ");
+                        String username = sc.nextLine();
+
+                        String password;
+                        while (true) {
+                            System.out.print("Password: ");
+                            password = sc.nextLine();
+                            String validationMessage = JavaApptest.validatePass(password);
+                            if (validationMessage.equals("valid")) {
+                                break;
+                            } else {
+                                System.out.println(validationMessage);
+                            }
+                        }
+
+                        acc[nums] = new Accounts();
+                        acc[nums].addInfo(firstname, lastname, email, username, password, ID);
+                        existingIDs.add(ID);
+                        nums++; 
+                    }
                     break;
 
                 case 2:
                     for (int i = 0; i < nums; i++) {
-                        acc[i].viewInfo();
+                        acc[i].viewAccount();
                     }
                     break;
 
@@ -85,7 +89,7 @@ public class Account {
                     if (nums > 0) {
                         System.out.println("\nCurrent Accounts List:");
                         for (int i = 0; i < nums; i++) {
-                            acc[i].viewInfo();
+                            acc[i].viewAccount();
                         }
 
                         System.out.print("Enter ID of User to edit: ");
@@ -93,8 +97,7 @@ public class Account {
                         sc.nextLine();
 
                         for (int i = 0; i < nums; i++) {
-                            if (acc[i].ID== Id) {
-                                
+                            if (acc[i].ID == Id) {
                                 System.out.print("New Username: ");
                                 String uname = sc.nextLine();
 
@@ -118,10 +121,16 @@ public class Account {
                         System.out.println("No accounts available to edit.");
                     }
                     break;
+                    
+                 case 5:
+                    System.out.println("THANK YOU!!!!");
+                    return;
             }
 
             System.out.print("Want to continue(yes/no)?: ");
             choice = sc.next();
         } while (choice.equals("y") || choice.equals("Y"));
     }
+    
+    
 }

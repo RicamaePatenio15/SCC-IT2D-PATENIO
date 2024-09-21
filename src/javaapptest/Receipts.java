@@ -18,8 +18,7 @@ public class Receipts {
     }
 
     public void viewInfo() {
-
-         System.out.printf("%-15s | %-15s | %-15s | %-15s | %-15s | %-15s | %-15s | %-15s\n", "Customer Number", "Name", "Product Name", "Quantity", "Price", "Cash", "Due", "Change");
+        System.out.printf("%-15s | %-15s | %-15s | %-15s | %-15s | %-15s | %-15s | %-15s\n", "Customer Number", "Name", "Product Name", "Quantity", "Price", "Cash", "Due", "Change");
          System.out.printf("%-15d | %-15s | %-15s | %-15d | %-15d | %-15.2f | %-15.2f | %-15.2f\n", this.uid, this.name, this.prodname, this.qty, this.price, this.cash, due, change);
     }
 
