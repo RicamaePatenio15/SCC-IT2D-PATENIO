@@ -1,9 +1,7 @@
-
 package javaapptest;
 import java.util.Scanner;
 
 public class Receipt {
-
 
     public void GetInfo() {
         Receipts[] rc = new Receipts[100];
@@ -37,31 +35,31 @@ public class Receipt {
                 case 1:
                     
                      System.out.print("Enter no. Customer/s: ");
-                     nums = sc.nextInt();
+                     int customers = sc.nextInt();
                      
-                    for(int i=0; i < nums; i++){
+                    for(int i = 0; i < customers; i++){
                         
-                    System.out.print("Customer ID: ");
-                    int uid= sc.nextInt();
+                        System.out.print("Customer ID: ");
+                        int uid = sc.nextInt();
                     
-                    System.out.print("Name: ");
-                    String name = sc.next();
+                        System.out.print("Name: ");
+                        String name = sc.next();
 
-                    System.out.print("Product Name: ");
-                    String prodname = sc.next();
+                        System.out.print("Product Name: ");
+                        String prodname = sc.next();
 
-                    System.out.print("Quantity: ");
-                    int qty = sc.nextInt();
+                        System.out.print("Quantity: ");
+                        int qty = sc.nextInt();
 
-                    System.out.print("Price: ");
-                    int price = sc.nextInt();
+                        System.out.print("Price: ");
+                        int price = sc.nextInt();
 
-                    System.out.print("Cash: ");
-                    double cash = sc.nextDouble();
+                        System.out.print("Cash: ");
+                        double cash = sc.nextDouble();
 
-                    rc[nums] = new Receipts();
-                    rc[nums].addInfo(uid, name, prodname, qty, price, cash);
-                    nums++;
+                        rc[nums] = new Receipts();
+                        rc[nums].addInfo(uid, name, prodname, qty, price, cash);
+                        nums++;
                     }
                     
                     break;
@@ -72,41 +70,37 @@ public class Receipt {
                     }
                     break;
 
-               case 3:
-                  
+                case 3:
                     if (nums > 0) {
-                    System.out.println("\nCurrent Receipts List:");
-                    
-                    for (int i = 0; i < nums; i++) {
+                        System.out.println("\nCurrent Receipts List:");
+                        for (int i = 0; i < nums; i++) {
                             rc[i].viewInfo();
                         }
-            }                 
-                    System.out.print("Enter the Customer ID of the Receipt to Edit: ");
+
+                        System.out.print("Enter the Customer ID of the Receipt to Edit: ");
                         int cid = sc.nextInt();
                         boolean found = false;
 
-                       
                         for (int i = 0; i < nums; i++) {
-                            if (rc[i].uid== cid) {
+                            if (rc[i].uid == cid) {
                                 found = true;
 
-                                
                                 System.out.print("Enter New Quantity: ");
                                 int uqty = sc.nextInt();
 
                                 System.out.print("Enter New Cash: ");
                                 double ucash = sc.nextDouble();
 
-                               
                                 rc[i].editReceipts(uqty, ucash);
                                 System.out.println("Receipt updated successfully.");
                                 break;
                             }
                         }
 
-                    if (!found){
+                        if (!found) {
                             System.out.println("Receipt with Customer ID '" + cid + "' not found.");
-                        }else{
+                        }
+                    } else {
                         System.out.println("No receipts available to edit.");
                     }
                     break;
@@ -120,6 +114,9 @@ public class Receipt {
             System.out.print("Want to continue (yes/no)?: ");
             choice = sc.next();
         } while (choice.equalsIgnoreCase("yes") || choice.equalsIgnoreCase("y"));
+        System.out.println("-----------------------------");
+        System.out.println("THANK YOU FOR USING THE APP!");
+        System.out.println("-----------------------------");
 
     }
 }

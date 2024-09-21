@@ -36,40 +36,39 @@ public class Grade {
                 case 1:
                     
                      System.out.print("Enter no. of Students: ");
-                     nums = sc.nextInt();
+                     int students = sc.nextInt();
                      
-                    for(int i=0; i < nums; i++){
-                    System.out.println("Enter details of student "+(i+1)+":");
+                    for(int i = 0; i < students; i++){
+                        System.out.println("Enter details of student " + (i + 1) + ":");
                 
-                    System.out.print("ID: ");
-                    int id = sc.nextInt();
+                        System.out.print("ID: ");
+                        int id = sc.nextInt();
                     
-                    System.out.print("Name: ");
-                    String name = sc.next();
+                        System.out.print("Name: ");
+                        String name = sc.next();
                     
-                    System.out.print("Prelim: ");
-                    double pr = sc.nextDouble();
+                        System.out.print("Prelim: ");
+                        double pr = sc.nextDouble();
                     
-                    System.out.print("Midterm: ");
-                    double md = sc.nextDouble();
+                        System.out.print("Midterm: ");
+                        double md = sc.nextDouble();
                     
-                    System.out.print("Prefinal: ");
-                    double pf = sc.nextDouble();
+                        System.out.print("Prefinal: ");
+                        double pf = sc.nextDouble();
                     
-                    System.out.print("Final: ");
-                    double fn = sc.nextDouble();
+                        System.out.print("Final: ");
+                        double fn = sc.nextDouble();
                     
-                    gr[nums] = new Grades();
-                    gr[nums].addGrades(name, id, pr, md, pf, fn); 
-                    nums++;
+                        gr[nums] = new Grades();
+                        gr[nums].addGrades(name, id, pr, md, pf, fn); 
+                        nums++;
                     }
                     break;
                  
                 case 2:
-                   
-                        for (int i = 0; i < nums; i++) {
-                            gr[i].viewGrades();
-                        }
+                    for (int i = 0; i < nums; i++) {
+                        gr[i].viewGrades();
+                    }
                     break;
            
                 case 3:
@@ -85,18 +84,18 @@ public class Grade {
                         for (int i = 0; i < nums; i++) {
                             if (gr[i].id == Id) {
                                 System.out.print("New Prelim Grade: ");
-                                double npr= sc.nextDouble();
+                                double npr = sc.nextDouble();
                                 
                                 System.out.print("New Midterm Grade: ");
-                                double nmd= sc.nextDouble();
+                                double nmd = sc.nextDouble();
                                 
                                 System.out.print("New Prefinal Grade: ");
                                 double nmpf = sc.nextDouble();
                                 
                                 System.out.print("New Final Grade: ");
-                                double nfn= sc.nextDouble();
+                                double nfn = sc.nextDouble();
     
-                                gr[i].editGrades(Id, npr, nmd, nmpf,nfn);
+                                gr[i].editGrades(Id, npr, nmd, nmpf, nfn);
                                 break;
                             }
                         }   
@@ -114,5 +113,8 @@ public class Grade {
             System.out.print("Want to continue(yes/no)?: ");
             choice = sc.next();
         } while (choice.equals("y") || choice.equals("Y"));
+        System.out.println("-----------------------------");
+        System.out.println("THANK YOU FOR USING THE APP!");
+        System.out.println("-----------------------------");
     }
 }

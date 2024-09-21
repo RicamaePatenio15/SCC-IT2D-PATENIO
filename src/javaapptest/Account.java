@@ -130,6 +130,9 @@ public class Account {
             System.out.print("Want to continue(yes/no)?: ");
             choice = sc.next();
         } while (choice.equals("y") || choice.equals("Y"));
+        System.out.println("-----------------------------");
+        System.out.println("THANK YOU FOR USING THE APP!");
+        System.out.println("-----------------------------");
     }
     
     
